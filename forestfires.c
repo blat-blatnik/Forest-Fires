@@ -25,7 +25,7 @@
 	|                                   |
 	| ESC             close the program |
 	| left-click            place trees |
-	| right-click          create fires |
+	| right-click           start fires |
 	|                                   |
 	|----------- "licence" -------------|
 	|                                   |
@@ -276,7 +276,10 @@ void updateCell(int y, int x) {
 	if (x == mouseX && y == mouseY) {
 		/* Highlight the cell with the mouse cursor. */
 		consoleChars[y][x].Attributes &= ~(0xF0);
-		consoleChars[y][x].Attributes |= (DarkGreen << 4);
+		if (newCell == Tree)
+			consoleChars[y][x].Attributes |= (DarkRed << 4);
+		else
+			consoleChars[y][x].Attributes |= (DarkGreen << 4);
 	}
 }
 
@@ -316,6 +319,8 @@ int main(void) {
 			if (input.EventType == KEY_EVENT && input.Event.KeyEvent.bKeyDown) {
 				if (input.Event.KeyEvent.wVirtualKeyCode == VK_ESCAPE)
 					return 0; /* close the application */
+				else if (input.Event.KeyEvent.wVirtualKeyCode == 'C')
+					memset(&oldCells[0][0], 0, sizeof(oldCells));
 			} else if (input.EventType == MOUSE_EVENT) {
 
 				int x = input.Event.MouseEvent.dwMousePosition.X;
