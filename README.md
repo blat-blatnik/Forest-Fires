@@ -4,6 +4,10 @@ A simple and rough simulation of forest fires on the windows console. It's mainl
 
 ![](./example-2.gif)
 
+This simulation is based on the [forest-fire model](https://en.wikipedia.org/wiki/Forest-fire_model) cellular automata - although I've tweaked the rules a bit to make it look more interesting.
+
+This is a console-application, although it responds to mouse and keyboard input, and it's animated without any flickering as you can see in the examples.
+
 ## Requirements
 
 The program uses the Windows API to manipulate the console - so this will definitely only work on Windows. It _should_ work on Windows 2000+ however I could only test it on Windows 7 and 10. If you want to compile it yourself, you'll need a C99 compiler. If you just want to try the program I provided [an executable](./Forest%20Fires.exe). 
