@@ -2,6 +2,8 @@
 
 A simple and rough simulation of forest fires on the windows console. It's mainly meant as a demonstration of rendering and animating ASCII-art on the console, as well as responding the keyboard and mouse events. It would also probably make for a cool screen-saver.
 
+![](./example-1.gif)
+
 ## Requirements
 
 The program uses the Windows API to manipulate the console - so this will definitely only work on Windows. It _should_ work on Windows 2000+ however I could only test it on Windows 7 and 10. If you want to compile it yourself, you'll need a C99 compiler. If you just want to try the program I provided [an executable](./Forest%20Fires.exe). 
@@ -16,6 +18,8 @@ key          | action
 `right-click`| start fires
 `C`          | clear everything
 `ESC`        | quit
+
+![](./example-2.gif)
 
 ## Licence
 
