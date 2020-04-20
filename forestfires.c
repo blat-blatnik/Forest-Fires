@@ -108,7 +108,7 @@ HANDLE inputBuffer;
 int mouseX = -1, mouseY = -1;
 int leftButtonPressed, rightButtonPressed;
 
-unsigned int randu() {
+unsigned int randu(void) {
 	/* xorshift: https://en.wikipedia.org/wiki/Xorshift#Example_implementation */
 	unsigned int x = rngState;
 	x ^= x << 13;
@@ -122,7 +122,7 @@ unsigned short makeTextAttrib(Color foreground, Color background) {
 	return (unsigned short)(foreground | (background << 4));
 }
 
-void initConsole() {
+void initConsole(void) {
 	consoleBuffer = GetStdHandle(STD_OUTPUT_HANDLE);
 	inputBuffer   = GetStdHandle(STD_INPUT_HANDLE);
 
@@ -188,7 +188,7 @@ void updateConsole(void) {
 	WriteConsoleOutputA(consoleBuffer, &consoleChars[0][0], charBufferSize, topLeft, &writeRegion);
 }
 
-void initSimulation() {
+void initSimulation(void) {
 	cellChars[Empty].Char.AsciiChar         = ' ';
 	cellChars[Sapling1].Char.AsciiChar      = ',';
 	cellChars[Sapling2].Char.AsciiChar      = ',';
@@ -283,7 +283,7 @@ void updateCell(int y, int x) {
 	}
 }
 
-void simulateTimestep() {
+void simulateTimestep(void) {
 	for (int y = 0; y < Height; ++y)
 		for (int x = 0; x < Width; ++x)
 			updateCell(y, x);
@@ -355,6 +355,4 @@ int main(void) {
 		updateConsole();
 		Sleep(16); /* no vsync - but this does the trick */
 	}
-
-	return 0;
 }
