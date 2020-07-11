@@ -14,16 +14,16 @@ The program uses the Windows API to manipulate the console - so this will defini
 
 ## Controls
 
-Trees have a random chance of growing on empty cells, and have a chance to spread to neighboring cells each turn. Every tree could randomly catch fire any turn, and the fire will quickly spread to all neighboring trees. 
-
-![](./example-2.gif)
-
 key                   | action
 :--------------------:|:------:
 <kbd>Left-click</kbd> | place trees
 <kbd>Right-click</kbd>| start fires
 <kbd>C</kbd>          | clear everything
 <kbd>ESC</kbd>        | quit
+
+Trees have a random chance of growing on empty cells, and have a chance to spread to neighboring cells each turn. Every tree could randomly catch fire any turn, and the fire will quickly spread to all neighboring trees. 
+
+![](./example-2.gif)
 
 ## Licence
 
