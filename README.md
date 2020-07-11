@@ -18,12 +18,12 @@ Trees have a random chance of growing on empty cells, and have a chance to sprea
 
 ![](./example-2.gif)
 
-key          | action
-:-----------:|:------:
-`left-click` | place trees
-`right-click`| start fires
-`C`          | clear everything
-`ESC`        | quit
+key                   | action
+:--------------------:|:------:
+<kbd>Left-click</kbd> | place trees
+<kbd>Right-click</kbd>| start fires
+<kbd>C</kbd>          | clear everything
+<kbd>ESC</kbd>        | quit
 
 ## Licence
 
